@@ -1,7 +1,7 @@
-package com.lyh.generator;
+package com.lyh.maker.generator.file;
 
 import cn.hutool.core.io.FileUtil;
-import com.lyh.model.AcmTemplateDataModel;
+import com.lyh.maker.model.GenericDataModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

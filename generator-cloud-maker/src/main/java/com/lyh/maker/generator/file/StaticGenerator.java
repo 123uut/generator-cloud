@@ -1,6 +1,5 @@
-package com.lyh.generator;
+package com.lyh.maker.generator.file;
 
-import cn.hutool.Hutool;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ArrayUtil;
 

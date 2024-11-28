@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lyh</groupId>
-    <artifactId>generator-cloud-local</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>${basePackage}</groupId>
+    <artifactId>${projectName}</artifactId>
+    <version>${version}</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -75,7 +75,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.lyh.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
+                            <mainClass>${basePackage}.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
                         </manifest>
                     </archive>
                 </configuration>
@@ -90,7 +90,7 @@
             </plugin>
 
             <plugin>
-            <groupId >org.apache.maven.plugins </groupId ><artifactId >maven-compiler-plugin</artifactId ><version >3.8.1</version ></plugin>
+                <groupId >org.apache.maven.plugins </groupId ><artifactId >maven-compiler-plugin</artifactId ><version >3.8.1</version ></plugin>
         </plugins>
     </build>
 

@@ -1,0 +1,58 @@
+{
+  "projectName": "acm-template-pro-generator",
+  "description": "ACM项目模板生成器",
+  "basePackage": "com.lyh",
+  "version": "1.0",
+  "author": "lyh",
+  "createTime": "2024-11-22",
+  "fileConfig": {
+    "inputRootPath": "D:/javaproject/generator-cloud/generator-cloud-demo-projects/acm-template-pro",
+    "outputRootPath": "generated",
+    "type": "dir",
+    "files": [
+      {
+        "inputPath": "src/com/lyh/acm/AcmTemplate.java.ftl",
+        "outputPath": "src/com/lyh/acm/Main.java",
+        "type": "file",
+        "generateType": "dynamic"
+      },
+      {
+        "inputPath": ".gitignore",
+        "outputPath": ".gitignore",
+        "type": "file",
+        "generateType": "static"
+      },
+      {
+        "inputPath": "README.md",
+        "outputPath": "README.md",
+        "type": "file",
+        "generateType": "static"
+      }
+    ]
+  },
+  "modelConfig": {
+    "models": [
+      {
+        "fieldName": "ifLoop",
+        "type": "boolean",
+        "description": "是否开启循环",
+        "defaultValue": false,
+        "abbr": "l"
+      },
+      {
+        "fieldName": "author",
+        "type": "String",
+        "description": "作者注释",
+        "defaultValue": "lyh",
+        "abbr": "a"
+      },
+      {
+        "fieldName": "printText",
+        "type": "String",
+        "description": "输出提示信息",
+        "defaultValue": "Sum：",
+        "abbr": "o"
+      }
+    ]
+  }
+}

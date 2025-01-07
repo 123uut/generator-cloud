@@ -11,14 +11,6 @@ import java.nio.file.StandardCopyOption;
 
 public class StaticGenerator {
 
-    public static void main(String[] args) {
-        String rootPath = System.getProperty("user.dir");
-        String templatePath = "generator-cloud-demo-projects"+ File.separator + "acm-template";
-        //根+模板路径concat
-        String sourcePath = rootPath + File.separator +templatePath;
-//        generateFilesByHutool(sourcePath,rootPath,true);
-        copyFilesByRecursive(sourcePath, rootPath);
-    }
 
     /**
      * hutool工具类实现：直接copy全部

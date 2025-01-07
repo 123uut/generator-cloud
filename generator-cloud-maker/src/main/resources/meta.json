@@ -8,6 +8,7 @@
   "fileConfig": {
     "inputRootPath": "D:/javaproject/generator-cloud/generator-cloud-demo-projects/acm-template-pro",
     "outputRootPath": "generated",
+    "generatedTemplatePath":".source",
     "type": "dir",
     "files": [
       {
@@ -17,21 +18,36 @@
         "generateType": "dynamic"
       },
       {
-        "inputPath": ".gitignore",
-        "outputPath": ".gitignore",
-        "type": "file",
-        "generateType": "static"
-      },
-      {
-        "inputPath": "README.md",
-        "outputPath": "README.md",
-        "type": "file",
-        "generateType": "static"
+        "groupKey": "git",
+        "groupName": "码云等静态文件",
+        "type": "group",
+        "condition": "needGit",
+        "fileInfos": [
+          {
+            "inputPath": ".gitignore",
+            "outputPath": ".gitignore",
+            "type": "file",
+            "generateType": "static"
+          },
+          {
+            "inputPath": "README.md",
+            "outputPath": "README.md",
+            "type": "file",
+            "generateType": "static"
+          }
+        ]
       }
     ]
   },
   "modelConfig": {
     "models": [
+      {
+        "fieldName": "needGit",
+        "type": "boolean",
+        "description": "是否生成gitignore文件",
+        "defaultValue": true,
+        "abbr": "g"
+      },
       {
         "fieldName": "ifLoop",
         "type": "boolean",
@@ -40,18 +56,27 @@
         "abbr": "l"
       },
       {
-        "fieldName": "author",
-        "type": "String",
-        "description": "作者注释",
-        "defaultValue": "lyh",
-        "abbr": "a"
-      },
-      {
-        "fieldName": "printText",
-        "type": "String",
-        "description": "输出提示信息",
-        "defaultValue": "Sum：",
-        "abbr": "o"
+        "groupKey": "acmTemplateModel",
+        "className": "AcmTemplateModel",
+        "groupName": "acm模板项目参数",
+        "description": "用以接收用户命令行输入的acm模板项目参数的类",
+        "condition": "ifLoop",
+        "modelConfigList": [
+          {
+            "fieldName": "author",
+            "type": "String",
+            "description": "作者注释",
+            "defaultValue": "lyh",
+            "abbr": "a"
+          },
+          {
+            "fieldName": "printText",
+            "type": "String",
+            "description": "输出提示信息",
+            "defaultValue": "Sum：",
+            "abbr": "o"
+          }
+        ]
       }
     ]
   }

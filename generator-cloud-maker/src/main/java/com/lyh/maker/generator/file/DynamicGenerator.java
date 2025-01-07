@@ -2,6 +2,7 @@ package com.lyh.maker.generator.file;
 
 import cn.hutool.core.io.FileUtil;
 import com.lyh.maker.model.GenericDataModel;
+import com.lyh.maker.model.meta.MetaInfo;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -14,7 +15,7 @@ import java.io.Writer;
 public class DynamicGenerator {
 
 
-    public static void doGenerate(String templatePath, String targetPath, Object dataModel) throws IOException, TemplateException {
+    public static void doGenerate(String templatePath, String targetPath, MetaInfo dataModel) throws IOException, TemplateException {
         // new 出 Configuration 对象，参数为 FreeMarker 版本号
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_32);
 

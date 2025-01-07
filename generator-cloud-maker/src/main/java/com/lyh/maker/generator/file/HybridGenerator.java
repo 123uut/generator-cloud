@@ -1,6 +1,7 @@
 package com.lyh.maker.generator.file;
 
 import com.lyh.maker.model.GenericDataModel;
+import com.lyh.maker.model.meta.MetaInfo;
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -26,7 +27,7 @@ public class HybridGenerator {
      * @param outputPath
      * @param dataModel
      */
-    public static void doGenerator(String demoPath, String templatePath, String outputPath, Object dataModel) throws TemplateException, IOException {
+    public static void doGenerator(String demoPath, String templatePath, String outputPath, MetaInfo dataModel) throws TemplateException, IOException {
 
         outputPath = new File(outputPath).getParent();
         //文件先全部拷贝
@@ -41,7 +42,7 @@ public class HybridGenerator {
 
 
 
-    public static void doGenerator(Object dataModel) throws TemplateException, IOException {
+    public static void doGenerator(MetaInfo dataModel) throws TemplateException, IOException {
 
         doGenerator(demoPath,templatePath,rootPath,dataModel);
     }

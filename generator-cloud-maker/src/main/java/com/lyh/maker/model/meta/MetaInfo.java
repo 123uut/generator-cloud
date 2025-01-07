@@ -24,9 +24,25 @@ public class MetaInfo {
     @NoArgsConstructor
     @Data
     public static class FileConfig {
+        /**
+         * 模板项目文件在用户终端里的绝对路径
+         */
         private String inputRootPath;
+        /**
+         * 要生成的代码生成器项目的相对路径
+         */
         private String outputRootPath;
+        /**
+         * 生成的代码生成器项目中必须包含用户原始的模板项目文件，
+         * 该路径指定原始文件在代码生成器项目文件中的相对路径
+         */
+        private String generatedTemplatePath;
+        /**
+         * dir、file、group
+         */
         private String type;
+
+
         private List<MetaFileInfo> files;
 
         @NoArgsConstructor
@@ -36,6 +52,20 @@ public class MetaInfo {
             private String outputPath;
             private String type;
             private String generateType;
+
+            private String groupKey;
+
+            private String groupName;
+
+            private String condition;
+
+            private List<MetaFileInfo> fileInfos;
+
+            @NoArgsConstructor
+            @Data
+            public static class FileInfo {
+
+            }
         }
     }
 
@@ -52,6 +82,14 @@ public class MetaInfo {
             private String description;
             private Object defaultValue;
             private String abbr;
+            private String groupKey;
+            private String groupName;
+            private String className;
+            private String condition;
+
+            private List<CommandArgModel> modelConfigList;
+
+            private String triggeredCommand;
         }
     }
 }

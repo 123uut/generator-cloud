@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "fileConfig": {
+    "fileGroupConfig": {
+      "groupKey": "knife4j",
+      "groupName": "是否开启knife4j",
+      "condition": "needKnife4j"
+    },
+    "files": [
+      {
+        "path": "src/main/java/com/yupi/springbootinit/config/Knife4jConfig.java"
+
+      }
+    ]
+  },
+  "modelConfig": {
+    "models": [
+      {
+        "fieldName": "needKnife4j",
+        "type": "boolean",
+        "description": "控制是否开启Knife4j",
+        "defaultValue": true
+      }
+    ]
+  }
+}
+

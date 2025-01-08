@@ -1,0 +1,48 @@
+{
+  "id": 1,
+  "fileConfig": {
+    "fileGroupConfig": {
+      "groupKey": "knife4j",
+      "groupName": "是否开启knife4j",
+      "condition": "needKnife4j"
+    },
+    "files": [
+      {
+        "path": "src/main/java/com/yupi/springbootinit/config/Knife4jConfig.java"
+
+      }
+    ]
+  },
+  "modelConfig": {
+    "modelGroupConfig": {
+      "groupKey": "knife4j",
+      "groupName": "接口文档配置",
+      "className": "Knife4j",
+      "description": "用于生成接口文档配置",
+      "condition": "needKnife4j"
+    },
+    "models": [
+      {
+        "fieldName": "title",
+        "type": "String",
+        "description": "接口文档标题",
+        "defaultValue": "接口文档",
+        "replacedText": "接口文档"
+      },
+      {
+        "fieldName": "description",
+        "type": "String",
+        "description": "接口文档描述",
+        "defaultValue": "springboot-init",
+        "replacedText": "springboot-init"
+      },
+      {
+        "fieldName": "version",
+        "type": "String",
+        "description": "接口文档版本",
+        "defaultValue": "1.0",
+        "replacedText": "1.0"
+      }
+    ]
+  }
+}

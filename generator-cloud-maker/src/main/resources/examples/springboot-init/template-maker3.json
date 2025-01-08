@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "fileConfig": {
+    "fileGroupConfig": {
+      "groupKey": "cros",
+      "groupName": "是否开启跨域",
+      "condition": "needCros"
+    },
+    "files": [
+      {
+        "path": "src/main/java/com/yupi/springbootinit/config/CorsConfig.java"
+
+      }
+    ]
+  },
+  "modelConfig": {
+    "models": [
+      {
+        "fieldName": "needCros",
+        "type": "boolean",
+        "description": "控制是否开启跨域",
+        "defaultValue": true
+      }
+    ]
+  }
+}
+
